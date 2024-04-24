@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: 'Azure Pipelines'
+pool: 'selfhosted_linux'
 
 variables:
   solution: '**/*.sln'
