@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: 'selfhosted_linux'
+pool: 'azure_linux'
 
 variables:
   solution: '**/*.sln'
