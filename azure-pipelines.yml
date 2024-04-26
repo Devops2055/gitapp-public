@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: selfhosted_linux
+pool: azure_linux
 
 variables:
   solution: '**/*.sln'
@@ -19,21 +19,24 @@ steps:
   inputs:
     packageType: 'sdk'
     version: 8.x
-- task: NuGetToolInstaller@1
 
-- task: NuGetCommand@2
+- task: DotNetCoreCLI@2
+  displayName: Restore
   inputs:
-    restoreSolution: '$(solution)'
+    command: 'restore'
+    projects: '$(solution)'
+    feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
-    command: 'build'
+    command: build
     projects: 'webapi-project/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
+  displayName: Test
   inputs:
-    command: 'publish'
-    publishWebProjects: true
-    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    command: test
+    projects: 'webapi-test/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
