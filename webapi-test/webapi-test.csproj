@@ -21,4 +21,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\webapi-project\dotnet-webapi.csproj" />
+  </ItemGroup>
+
 </Project>
