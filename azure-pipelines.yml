@@ -38,5 +38,5 @@ steps:
   displayName: Test
   inputs:
     command: test
-    projects: 'webapi-project/*.csproj'
+    projects: 'webapi-test/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
