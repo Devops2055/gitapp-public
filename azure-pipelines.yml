@@ -6,16 +6,7 @@
 trigger:
 - main
 
-parameters:
-  - name: agent_pool
-    displayName: Agent pool name
-    type: string
-    default: azure_linux
-    values: 
-    - selfhosted_linux
-    - azure_linux
-
-pool: $(parameters.agent_pool)
+pool: azure_linux
 
 variables:
   solution: '**/*.sln'
