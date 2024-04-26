@@ -20,6 +20,8 @@ steps:
     packageType: 'sdk'
     version: 8.x
 - task: NuGetToolInstaller@1
+  inputs:
+    checkLatest: true
 
 - task: NuGetCommand@2
   inputs:
