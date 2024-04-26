@@ -25,11 +25,13 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
+    command: restore
     restoreSolution: '$(solution)'
+
 
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
-    command: 'build'
+    command: build
     projects: 'webapi-project/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
