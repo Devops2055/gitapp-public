@@ -19,11 +19,9 @@ steps:
   inputs:
     packageType: 'sdk'
     version: 8.x
-- task: NuGetToolInstaller@1
-  inputs:
-    checkLatest: true
 
 - task: DotNetCoreCLI@2
+  displayName: Restore
   inputs:
     command: 'restore'
     projects: '$(solution)'
@@ -33,5 +31,12 @@ steps:
   displayName: Build
   inputs:
     command: build
+    projects: 'webapi-project/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: Test
+  inputs:
+    command: test
     projects: 'webapi-project/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
