@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: selfhosted_linux
+pool: $(agent_pool)
 
 variables:
   solution: '**/*.sln'
