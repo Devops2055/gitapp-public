@@ -1,1 +1,1 @@
-#gitapp
+[![Build Status](https://dev.azure.com/fabiodeorazi/DevProject/_apis/build/status%2FDevops2055.gitapp?branchName=main)](https://dev.azure.com/fabiodeorazi/DevProject/_build/latest?definitionId=8&branchName=main)
