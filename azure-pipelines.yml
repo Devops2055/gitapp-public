@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: azure-linux
+pool: azure_linux
 
 variables:
   buildConfiguration: 'Release'
