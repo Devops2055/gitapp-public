@@ -11,11 +11,11 @@ on:
 jobs:
     build:
         name: Azure Pipeline
-        runs-on: azure.linux
+        runs-on: azure_linux
         steps:
         - name: Azure Pipelines Action
-          uses: Azure/pipelines@v1
+          uses: Azure/pipelines@v1.2
           with:
             azure-devops-project-url: https://dev.azure.com/fabiodeorazi/DevProject
             azure-pipeline-name: 'webapp.git'
-            azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
+            azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'
