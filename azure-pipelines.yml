@@ -18,5 +18,5 @@ steps:
     packageType: 'sdk'
     version: 8.x
 
-- script: dotnet build --configuration $(buildConfiguration)
+- script: dotnet build webapi-project/*.csproj --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
