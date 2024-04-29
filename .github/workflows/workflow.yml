@@ -18,4 +18,4 @@ jobs:
           with:
             azure-devops-project-url: https://dev.azure.com/fabiodeorazi/DevProject
             azure-pipeline-name: 'webapp.git'
-            azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'
+            azure-devops-token: ${{ secrets.AZURE_PIPELINE_TOKEN }}
